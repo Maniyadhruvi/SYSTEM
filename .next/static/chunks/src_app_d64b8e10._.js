@@ -963,7 +963,7 @@ function TaskManager() {
     // Move localStorage access to useEffect
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "TaskManager.useEffect": ()=>{
-            const userEmail = localStorage.getItem('currentUserEmail');
+            const userEmail = localStorage.getItem("currentUserEmail");
             setCurrentUserEmail(userEmail);
         }
     }["TaskManager.useEffect"], []);
@@ -980,54 +980,54 @@ function TaskManager() {
     const [showEditTodoModal, setShowEditTodoModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [editingTodo, setEditingTodo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [newHabit, setNewHabit] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        title: '',
-        notes: '',
-        difficulty: 'easy',
-        habitType: ''
+        title: "",
+        notes: "",
+        difficulty: "easy",
+        habitType: ""
     });
     const [newDaily, setNewDaily] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        title: '',
-        notes: '',
-        difficulty: 'easy',
-        startDate: new Date().toISOString().split('T')[0],
-        repeats: 'weekly',
+        title: "",
+        notes: "",
+        difficulty: "easy",
+        startDate: new Date().toISOString().split("T")[0],
+        repeats: "weekly",
         repeatEvery: 1,
         repeatOn: [
-            'Mo',
-            'Tu',
-            'We',
-            'Th',
-            'Fr',
-            'Sa',
-            'Su'
+            "Mo",
+            "Tu",
+            "We",
+            "Th",
+            "Fr",
+            "Sa",
+            "Su"
         ],
         tags: []
     });
     const [newTodo, setNewTodo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        title: '',
-        notes: '',
-        difficulty: 'easy',
+        title: "",
+        notes: "",
+        difficulty: "easy",
         checklist: [],
-        dueDate: '',
+        dueDate: "",
         tags: []
     });
     const popupRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const modalRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const taskTypes = [
         {
-            type: 'habit',
-            label: 'Habit',
-            icon: '⚖️'
+            type: "habit",
+            label: "Habit",
+            icon: "⚖️"
         },
         {
-            type: 'daily',
-            label: 'Daily',
-            icon: '📅'
+            type: "daily",
+            label: "Daily",
+            icon: "📅"
         },
         {
-            type: 'todo',
-            label: 'To Do',
-            icon: '✓'
+            type: "todo",
+            label: "To Do",
+            icon: "✓"
         }
     ];
     const [isInitialized, setIsInitialized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1046,9 +1046,9 @@ function TaskManager() {
                     }
                 }
             }["TaskManager.useEffect.handleClickOutside"];
-            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener("mousedown", handleClickOutside);
             return ({
-                "TaskManager.useEffect": ()=>document.removeEventListener('mousedown', handleClickOutside)
+                "TaskManager.useEffect": ()=>document.removeEventListener("mousedown", handleClickOutside)
             })["TaskManager.useEffect"];
         }
     }["TaskManager.useEffect"], []);
@@ -1058,21 +1058,21 @@ function TaskManager() {
             id: Math.random().toString(36).substr(2, 9),
             userId: currentUserEmail,
             title: newHabit.title.trim(),
-            notes: newHabit.notes || '',
-            difficulty: newHabit.difficulty || 'easy',
-            type: 'habit',
+            notes: newHabit.notes || "",
+            difficulty: newHabit.difficulty || "easy",
+            type: "habit",
             completed: false,
             habitType: newHabit.habitType
         };
         dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addTask"])(habit));
         setNewHabit({
-            title: '',
-            notes: '',
-            difficulty: 'easy',
-            habitType: ''
+            title: "",
+            notes: "",
+            difficulty: "easy",
+            habitType: ""
         });
         setShowHabitModal(false);
-        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('habits'));
+        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("habits"));
     };
     const handleCreateDaily = ()=>{
         if (!newDaily.title.trim() || !currentUserEmail) return;
@@ -1080,45 +1080,45 @@ function TaskManager() {
             id: Math.random().toString(36).substr(2, 9),
             userId: currentUserEmail,
             title: newDaily.title.trim(),
-            notes: newDaily.notes || '',
-            difficulty: newDaily.difficulty || 'easy',
-            type: 'daily',
+            notes: newDaily.notes || "",
+            difficulty: newDaily.difficulty || "easy",
+            type: "daily",
             completed: false,
-            startDate: newDaily.startDate || new Date().toISOString().split('T')[0],
-            repeats: newDaily.repeats || 'weekly',
+            startDate: newDaily.startDate || new Date().toISOString().split("T")[0],
+            repeats: newDaily.repeats || "weekly",
             repeatEvery: Number(newDaily.repeatEvery) || 1,
             repeatOn: Array.isArray(newDaily.repeatOn) ? newDaily.repeatOn : [
-                'Mo',
-                'Tu',
-                'We',
-                'Th',
-                'Fr',
-                'Sa',
-                'Su'
+                "Mo",
+                "Tu",
+                "We",
+                "Th",
+                "Fr",
+                "Sa",
+                "Su"
             ],
             tags: Array.isArray(newDaily.tags) ? newDaily.tags : []
         };
         dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addTask"])(daily));
         setNewDaily({
-            title: '',
-            notes: '',
-            difficulty: 'easy',
-            startDate: new Date().toISOString().split('T')[0],
-            repeats: 'weekly',
+            title: "",
+            notes: "",
+            difficulty: "easy",
+            startDate: new Date().toISOString().split("T")[0],
+            repeats: "weekly",
             repeatEvery: 1,
             repeatOn: [
-                'Mo',
-                'Tu',
-                'We',
-                'Th',
-                'Fr',
-                'Sa',
-                'Su'
+                "Mo",
+                "Tu",
+                "We",
+                "Th",
+                "Fr",
+                "Sa",
+                "Su"
             ],
             tags: []
         });
         setShowDailyModal(false);
-        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('dailies'));
+        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("dailies"));
     };
     const handleCreateTodo = ()=>{
         if (!newTodo.title.trim() || !currentUserEmail) return;
@@ -1126,32 +1126,32 @@ function TaskManager() {
             id: Math.random().toString(36).substr(2, 9),
             userId: currentUserEmail,
             title: newTodo.title.trim(),
-            notes: newTodo.notes || '',
-            difficulty: newTodo.difficulty || 'easy',
-            type: 'todo',
+            notes: newTodo.notes || "",
+            difficulty: newTodo.difficulty || "easy",
+            type: "todo",
             completed: false,
-            dueDate: newTodo.dueDate || '',
+            dueDate: newTodo.dueDate || "",
             checklist: Array.isArray(newTodo.checklist) ? newTodo.checklist : [],
             tags: Array.isArray(newTodo.tags) ? newTodo.tags : []
         };
         dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addTask"])(todo));
         setNewTodo({
-            title: '',
-            notes: '',
-            difficulty: 'easy',
+            title: "",
+            notes: "",
+            difficulty: "easy",
             checklist: [],
-            dueDate: '',
+            dueDate: "",
             tags: []
         });
         setShowTodoModal(false);
-        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('todos'));
+        dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("todos"));
     };
     const updateTaskTitle = (taskId, newTitle)=>{
         const task = userTasks.find((t)=>t.id === taskId);
         if (task) {
             dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateTask"])({
                 ...task,
-                title: newTitle || ''
+                title: newTitle || ""
             }));
         }
     };
@@ -1167,13 +1167,13 @@ function TaskManager() {
     const handleEditTask = (taskId)=>{
         const taskToEdit = userTasks.find((task)=>task.id === taskId);
         if (taskToEdit) {
-            if (taskToEdit.type === 'habit') {
+            if (taskToEdit.type === "habit") {
                 setEditingHabit(taskToEdit);
                 setShowEditHabitModal(true);
-            } else if (taskToEdit.type === 'daily') {
+            } else if (taskToEdit.type === "daily") {
                 setEditingDaily(taskToEdit);
                 setShowEditDailyModal(true);
-            } else if (taskToEdit.type === 'todo') {
+            } else if (taskToEdit.type === "todo") {
                 setEditingTodo(taskToEdit);
                 setShowEditTodoModal(true);
             }
@@ -1187,7 +1187,7 @@ function TaskManager() {
         }
     };
     const handleDeleteHabit = (taskId)=>{
-        if (window.confirm('Are you sure you want to delete this habit?')) {
+        if (window.confirm("Are you sure you want to delete this habit?")) {
             dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteTask"])(taskId));
             setShowEditHabitModal(false);
             setEditingHabit(null);
@@ -1201,7 +1201,7 @@ function TaskManager() {
         }
     };
     const handleDeleteDaily = (taskId)=>{
-        if (window.confirm('Are you sure you want to delete this daily?')) {
+        if (window.confirm("Are you sure you want to delete this daily?")) {
             dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteTask"])(taskId));
             setShowEditDailyModal(false);
             setEditingDaily(null);
@@ -1215,16 +1215,16 @@ function TaskManager() {
         }
     };
     const handleDeleteTodo = (taskId)=>{
-        if (window.confirm('Are you sure you want to delete this todo?')) {
+        if (window.confirm("Are you sure you want to delete this todo?")) {
             dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["deleteTask"])(taskId));
             setShowEditTodoModal(false);
             setEditingTodo(null);
         }
     };
     const filteredTasks = Array.isArray(userTasks) ? userTasks.filter((task)=>{
-        const matchesType = activeTab === 'habits' ? task.type === 'habit' : activeTab === 'dailies' ? task.type === 'daily' : task.type === 'todo';
+        const matchesType = activeTab === "habits" ? task.type === "habit" : activeTab === "dailies" ? task.type === "daily" : task.type === "todo";
         const searchLower = searchQuery.toLowerCase();
-        const matchesSearch = searchQuery === '' || task.title.toLowerCase().includes(searchLower) || task.notes && task.notes.toLowerCase().includes(searchLower);
+        const matchesSearch = searchQuery === "" || task.title.toLowerCase().includes(searchLower) || task.notes && task.notes.toLowerCase().includes(searchLower);
         return matchesType && matchesSearch;
     }) : [];
     const showNotification = (message, type)=>{
@@ -1243,14 +1243,14 @@ function TaskManager() {
         }, 3000);
     };
     // Add this before the return statement
-    const dailiesCount = userTasks.filter((task)=>task.type === 'daily').length;
+    const dailiesCount = userTasks.filter((task)=>task.type === "daily").length;
     if (!isInitialized) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].loading,
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/src/app/components/TaskManager.tsx",
-            lineNumber: 319,
+            lineNumber: 342,
             columnNumber: 12
         }, this);
     }
@@ -1259,7 +1259,7 @@ function TaskManager() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Header$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                lineNumber: 324,
+                lineNumber: 347,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1268,43 +1268,43 @@ function TaskManager() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].notificationContainer,
                         children: notifications.map((notification)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].notification} ${notification.type === 'health' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].healthNotification : notification.type === 'experience' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].experienceNotification : ''}`,
+                                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].notification} ${notification.type === "health" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].healthNotification : notification.type === "experience" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].experienceNotification : ""}`,
                                 "data-type": notification.type,
                                 children: [
-                                    notification.type === 'gold' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    notification.type === "gold" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].goldIcon,
                                         children: "💰"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 336,
-                                        columnNumber: 48
+                                        lineNumber: 363,
+                                        columnNumber: 17
                                     }, this),
-                                    notification.type === 'health' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    notification.type === "health" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].healthIcon,
                                         children: "❤️"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 337,
-                                        columnNumber: 50
+                                        lineNumber: 366,
+                                        columnNumber: 17
                                     }, this),
-                                    notification.type === 'experience' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    notification.type === "experience" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].experienceIcon,
                                         children: "⭐"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 338,
-                                        columnNumber: 54
+                                        lineNumber: 369,
+                                        columnNumber: 17
                                     }, this),
                                     notification.message
                                 ]
                             }, notification.id, true, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 328,
+                                lineNumber: 351,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                        lineNumber: 326,
+                        lineNumber: 349,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1324,22 +1324,22 @@ function TaskManager() {
                                                 onChange: (e)=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setSearchQuery"])(e.target.value))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 346,
+                                                lineNumber: 378,
                                                 columnNumber: 15
                                             }, this),
                                             searchQuery && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].clearSearch,
-                                                onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setSearchQuery"])('')),
+                                                onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setSearchQuery"])("")),
                                                 children: "×"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 354,
+                                                lineNumber: 386,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 377,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1351,7 +1351,7 @@ function TaskManager() {
                                                 children: "+ Add Task"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 363,
+                                                lineNumber: 395,
                                                 columnNumber: 15
                                             }, this),
                                             isPopupOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1360,11 +1360,11 @@ function TaskManager() {
                                                 children: taskTypes.map((taskType)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].popupOption,
                                                         onClick: ()=>{
-                                                            if (taskType.type === 'habit') {
+                                                            if (taskType.type === "habit") {
                                                                 setShowHabitModal(true);
-                                                            } else if (taskType.type === 'daily') {
+                                                            } else if (taskType.type === "daily") {
                                                                 setShowDailyModal(true);
-                                                            } else if (taskType.type === 'todo') {
+                                                            } else if (taskType.type === "todo") {
                                                                 setShowTodoModal(true);
                                                             }
                                                             setIsPopupOpen(false);
@@ -1375,37 +1375,37 @@ function TaskManager() {
                                                                 children: taskType.icon
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 386,
+                                                                lineNumber: 418,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: taskType.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 387,
+                                                                lineNumber: 419,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, taskType.type, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 372,
+                                                        lineNumber: 404,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 370,
+                                                lineNumber: 402,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 362,
+                                        lineNumber: 394,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 344,
+                                lineNumber: 376,
                                 columnNumber: 11
                             }, this),
                             showHabitModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1421,7 +1421,7 @@ function TaskManager() {
                                                     children: "Create Habit"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 399,
+                                                    lineNumber: 431,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1433,29 +1433,29 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 401,
+                                                            lineNumber: 433,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].createButton,
                                                             onClick: handleCreateHabit,
                                                             disabled: !newHabit.title.trim() || !newHabit.habitType,
-                                                            children: "Add Task"
+                                                            children: "Create"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 407,
+                                                            lineNumber: 439,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 400,
+                                                    lineNumber: 432,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 398,
+                                            lineNumber: 430,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1468,7 +1468,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 419,
+                                                            lineNumber: 451,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1482,13 +1482,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 420,
+                                                            lineNumber: 452,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 418,
+                                                    lineNumber: 450,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1498,7 +1498,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 430,
+                                                            lineNumber: 464,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1512,13 +1512,13 @@ function TaskManager() {
                                                             rows: 4
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 431,
+                                                            lineNumber: 465,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 429,
+                                                    lineNumber: 463,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1528,16 +1528,16 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitTypeButton,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${newHabit.habitType === 'positive' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ''}`,
+                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${newHabit.habitType === "positive" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ""}`,
                                                                     onClick: ()=>setNewHabit({
                                                                             ...newHabit,
-                                                                            habitType: 'positive'
+                                                                            habitType: "positive"
                                                                         }),
                                                                     type: "button",
                                                                     children: "+"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 442,
+                                                                    lineNumber: 478,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1545,29 +1545,29 @@ function TaskManager() {
                                                                     children: "Positive"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 449,
+                                                                    lineNumber: 493,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 441,
+                                                            lineNumber: 477,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitTypeButton,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${newHabit.habitType === 'negative' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ''}`,
+                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${newHabit.habitType === "negative" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ""}`,
                                                                     onClick: ()=>setNewHabit({
                                                                             ...newHabit,
-                                                                            habitType: 'negative'
+                                                                            habitType: "negative"
                                                                         }),
                                                                     type: "button",
                                                                     children: "−"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 452,
+                                                                    lineNumber: 496,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1575,19 +1575,19 @@ function TaskManager() {
                                                                     children: "Negative"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 459,
+                                                                    lineNumber: 511,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 451,
+                                                            lineNumber: 495,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 440,
+                                                    lineNumber: 476,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1597,7 +1597,7 @@ function TaskManager() {
                                                             children: "Difficulty"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 464,
+                                                            lineNumber: 516,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1613,7 +1613,7 @@ function TaskManager() {
                                                                     children: "Easy"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 470,
+                                                                    lineNumber: 530,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1621,7 +1621,7 @@ function TaskManager() {
                                                                     children: "Medium"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 471,
+                                                                    lineNumber: 531,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1629,36 +1629,46 @@ function TaskManager() {
                                                                     children: "Hard"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 472,
+                                                                    lineNumber: 532,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 465,
+                                                            lineNumber: 517,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 463,
+                                                    lineNumber: 515,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].createButton,
+                                                    onClick: handleCreateHabit,
+                                                    disabled: !newHabit.title.trim() || !newHabit.habitType,
+                                                    children: "Create"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/TaskManager.tsx",
+                                                    lineNumber: 536,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 417,
+                                            lineNumber: 449,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 429,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 396,
+                                lineNumber: 428,
                                 columnNumber: 13
                             }, this),
                             showDailyModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1674,7 +1684,7 @@ function TaskManager() {
                                                     children: "Create Daily"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 484,
+                                                    lineNumber: 552,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1686,7 +1696,7 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 486,
+                                                            lineNumber: 554,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1696,19 +1706,19 @@ function TaskManager() {
                                                             children: "Create"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 492,
+                                                            lineNumber: 560,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 485,
+                                                    lineNumber: 553,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 483,
+                                            lineNumber: 551,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1721,7 +1731,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 504,
+                                                            lineNumber: 572,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1735,13 +1745,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 505,
+                                                            lineNumber: 573,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 503,
+                                                    lineNumber: 571,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1751,7 +1761,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 515,
+                                                            lineNumber: 585,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1765,13 +1775,13 @@ function TaskManager() {
                                                             rows: 4
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 516,
+                                                            lineNumber: 586,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 514,
+                                                    lineNumber: 584,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1781,7 +1791,7 @@ function TaskManager() {
                                                             children: "Start Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 526,
+                                                            lineNumber: 598,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1794,13 +1804,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 527,
+                                                            lineNumber: 599,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 525,
+                                                    lineNumber: 597,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1810,7 +1820,7 @@ function TaskManager() {
                                                             children: "Repeats"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 536,
+                                                            lineNumber: 610,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1826,7 +1836,7 @@ function TaskManager() {
                                                                     children: "Daily"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 542,
+                                                                    lineNumber: 618,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1834,7 +1844,7 @@ function TaskManager() {
                                                                     children: "Weekly"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 543,
+                                                                    lineNumber: 619,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1842,19 +1852,19 @@ function TaskManager() {
                                                                     children: "Monthly"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 544,
+                                                                    lineNumber: 620,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 537,
+                                                            lineNumber: 611,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 535,
+                                                    lineNumber: 609,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1864,7 +1874,7 @@ function TaskManager() {
                                                             children: "Repeat Every"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 549,
+                                                            lineNumber: 625,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1881,26 +1891,26 @@ function TaskManager() {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 551,
+                                                                    lineNumber: 627,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Week"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 558,
+                                                                    lineNumber: 639,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 550,
+                                                            lineNumber: 626,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 548,
+                                                    lineNumber: 624,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1910,21 +1920,21 @@ function TaskManager() {
                                                             children: "Repeat On"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 563,
+                                                            lineNumber: 644,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].weekDays,
                                                             children: [
-                                                                'Su',
-                                                                'Mo',
-                                                                'Tu',
-                                                                'We',
-                                                                'Th',
-                                                                'Fr',
-                                                                'Sa'
+                                                                "Su",
+                                                                "Mo",
+                                                                "Tu",
+                                                                "We",
+                                                                "Th",
+                                                                "Fr",
+                                                                "Sa"
                                                             ].map((day)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].dayButton} ${newDaily.repeatOn.includes(day) ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ''}`,
+                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].dayButton} ${newDaily.repeatOn.includes(day) ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ""}`,
                                                                     onClick: ()=>{
                                                                         const newRepeatOn = newDaily.repeatOn.includes(day) ? newDaily.repeatOn.filter((d)=>d !== day) : [
                                                                             ...newDaily.repeatOn,
@@ -1938,18 +1948,18 @@ function TaskManager() {
                                                                     children: day
                                                                 }, day, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 566,
+                                                                    lineNumber: 647,
                                                                     columnNumber: 25
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 564,
+                                                            lineNumber: 645,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 562,
+                                                    lineNumber: 643,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1959,7 +1969,7 @@ function TaskManager() {
                                                             children: "Difficulty"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 583,
+                                                            lineNumber: 668,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1975,7 +1985,7 @@ function TaskManager() {
                                                                     children: "Easy"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 589,
+                                                                    lineNumber: 679,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1983,7 +1993,7 @@ function TaskManager() {
                                                                     children: "Medium"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 590,
+                                                                    lineNumber: 680,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1991,19 +2001,19 @@ function TaskManager() {
                                                                     children: "Hard"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 591,
+                                                                    lineNumber: 681,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 584,
+                                                            lineNumber: 669,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 582,
+                                                    lineNumber: 667,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2013,7 +2023,7 @@ function TaskManager() {
                                                             children: "Tags"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 596,
+                                                            lineNumber: 686,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2021,7 +2031,7 @@ function TaskManager() {
                                                             placeholder: "Add tags...",
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput,
                                                             onKeyDown: (e)=>{
-                                                                if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                                                                if (e.key === "Enter" && e.currentTarget.value.trim()) {
                                                                     setNewDaily({
                                                                         ...newDaily,
                                                                         tags: [
@@ -2029,35 +2039,45 @@ function TaskManager() {
                                                                             e.currentTarget.value.trim()
                                                                         ]
                                                                     });
-                                                                    e.currentTarget.value = '';
+                                                                    e.currentTarget.value = "";
                                                                 }
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 597,
+                                                            lineNumber: 687,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 595,
+                                                    lineNumber: 685,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].createButton,
+                                                    onClick: handleCreateDaily,
+                                                    disabled: !newDaily.title.trim(),
+                                                    children: "Create"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/TaskManager.tsx",
+                                                    lineNumber: 706,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 502,
+                                            lineNumber: 570,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 482,
+                                    lineNumber: 550,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 481,
+                                lineNumber: 549,
                                 columnNumber: 13
                             }, this),
                             showTodoModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2073,7 +2093,7 @@ function TaskManager() {
                                                     children: "Create To Do"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 621,
+                                                    lineNumber: 722,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2085,7 +2105,7 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 623,
+                                                            lineNumber: 724,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2095,19 +2115,19 @@ function TaskManager() {
                                                             children: "Create"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 629,
+                                                            lineNumber: 730,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 622,
+                                                    lineNumber: 723,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 620,
+                                            lineNumber: 721,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2120,7 +2140,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 641,
+                                                            lineNumber: 742,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2134,13 +2154,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 642,
+                                                            lineNumber: 743,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 640,
+                                                    lineNumber: 741,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2150,7 +2170,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 652,
+                                                            lineNumber: 755,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -2164,13 +2184,13 @@ function TaskManager() {
                                                             rows: 4
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 653,
+                                                            lineNumber: 756,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 651,
+                                                    lineNumber: 754,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2180,7 +2200,7 @@ function TaskManager() {
                                                             children: "Checklist"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 663,
+                                                            lineNumber: 768,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2189,7 +2209,7 @@ function TaskManager() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].addChecklistItem,
                                                                     onClick: ()=>{
-                                                                        const item = prompt('Enter checklist item:');
+                                                                        const item = prompt("Enter checklist item:");
                                                                         if (item?.trim()) {
                                                                             setNewTodo({
                                                                                 ...newTodo,
@@ -2203,7 +2223,7 @@ function TaskManager() {
                                                                     children: "+ New checklist item"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 665,
+                                                                    lineNumber: 770,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 newTodo.checklist.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2213,7 +2233,7 @@ function TaskManager() {
                                                                                 children: item
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 681,
+                                                                                lineNumber: 786,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2227,25 +2247,25 @@ function TaskManager() {
                                                                                 children: "×"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 682,
+                                                                                lineNumber: 787,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, index, true, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 680,
+                                                                        lineNumber: 785,
                                                                         columnNumber: 25
                                                                     }, this))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 664,
+                                                            lineNumber: 769,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 662,
+                                                    lineNumber: 767,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2255,7 +2275,7 @@ function TaskManager() {
                                                             children: "Difficulty"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 699,
+                                                            lineNumber: 806,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2271,7 +2291,7 @@ function TaskManager() {
                                                                     children: "Easy"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 705,
+                                                                    lineNumber: 817,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2279,7 +2299,7 @@ function TaskManager() {
                                                                     children: "Medium"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 706,
+                                                                    lineNumber: 818,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2287,19 +2307,19 @@ function TaskManager() {
                                                                     children: "Hard"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 707,
+                                                                    lineNumber: 819,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 700,
+                                                            lineNumber: 807,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 698,
+                                                    lineNumber: 805,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2309,7 +2329,7 @@ function TaskManager() {
                                                             children: "Due Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 712,
+                                                            lineNumber: 824,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2322,13 +2342,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 713,
+                                                            lineNumber: 825,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 711,
+                                                    lineNumber: 823,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2338,7 +2358,7 @@ function TaskManager() {
                                                             children: "Tags"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 722,
+                                                            lineNumber: 836,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2346,7 +2366,7 @@ function TaskManager() {
                                                             placeholder: "Add tags...",
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput,
                                                             onKeyDown: (e)=>{
-                                                                if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                                                                if (e.key === "Enter" && e.currentTarget.value.trim()) {
                                                                     setNewTodo({
                                                                         ...newTodo,
                                                                         tags: [
@@ -2354,12 +2374,12 @@ function TaskManager() {
                                                                             e.currentTarget.value.trim()
                                                                         ]
                                                                     });
-                                                                    e.currentTarget.value = '';
+                                                                    e.currentTarget.value = "";
                                                                 }
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 723,
+                                                            lineNumber: 837,
                                                             columnNumber: 21
                                                         }, this),
                                                         newTodo.tags.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2379,41 +2399,51 @@ function TaskManager() {
                                                                             children: "×"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 742,
+                                                                            lineNumber: 859,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, index, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 740,
+                                                                    lineNumber: 857,
                                                                     columnNumber: 27
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 738,
+                                                            lineNumber: 855,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 721,
+                                                    lineNumber: 835,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].createButton,
+                                                    onClick: handleCreateTodo,
+                                                    disabled: !newTodo.title.trim(),
+                                                    children: "Create"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/TaskManager.tsx",
+                                                    lineNumber: 878,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 639,
+                                            lineNumber: 740,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 619,
+                                    lineNumber: 720,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 618,
+                                lineNumber: 719,
                                 columnNumber: 13
                             }, this),
                             showEditHabitModal && editingHabit && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2428,7 +2458,7 @@ function TaskManager() {
                                                     children: "Edit Habit"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 767,
+                                                    lineNumber: 894,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2443,7 +2473,7 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 769,
+                                                            lineNumber: 896,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2453,19 +2483,19 @@ function TaskManager() {
                                                             children: "Save"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 778,
+                                                            lineNumber: 905,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 768,
+                                                    lineNumber: 895,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 766,
+                                            lineNumber: 893,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2478,7 +2508,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 790,
+                                                            lineNumber: 917,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2492,13 +2522,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 791,
+                                                            lineNumber: 918,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 789,
+                                                    lineNumber: 916,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2508,7 +2538,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 804,
+                                                            lineNumber: 933,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2524,18 +2554,18 @@ function TaskManager() {
                                                                 rows: 4
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 806,
+                                                                lineNumber: 935,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 805,
+                                                            lineNumber: 934,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 803,
+                                                    lineNumber: 932,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2545,15 +2575,15 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitTypeButton,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${editingHabit.habitType === 'positive' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ''}`,
+                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${editingHabit.habitType === "positive" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ""}`,
                                                                     onClick: ()=>setEditingHabit({
                                                                             ...editingHabit,
-                                                                            habitType: 'positive'
+                                                                            habitType: "positive"
                                                                         }),
                                                                     children: "+"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 821,
+                                                                    lineNumber: 952,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2561,28 +2591,28 @@ function TaskManager() {
                                                                     children: "Positive"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 830,
+                                                                    lineNumber: 969,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 820,
+                                                            lineNumber: 951,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitTypeButton,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${editingHabit.habitType === 'negative' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ''}`,
+                                                                    className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].circleButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${editingHabit.habitType === "negative" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].selected : ""}`,
                                                                     onClick: ()=>setEditingHabit({
                                                                             ...editingHabit,
-                                                                            habitType: 'negative'
+                                                                            habitType: "negative"
                                                                         }),
                                                                     children: "−"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 833,
+                                                                    lineNumber: 972,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2590,19 +2620,19 @@ function TaskManager() {
                                                                     children: "Negative"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 842,
+                                                                    lineNumber: 989,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 832,
+                                                            lineNumber: 971,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 819,
+                                                    lineNumber: 950,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2616,13 +2646,13 @@ function TaskManager() {
                                                                     children: "ⓘ"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 849,
+                                                                    lineNumber: 996,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 847,
+                                                            lineNumber: 994,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2638,7 +2668,7 @@ function TaskManager() {
                                                                     children: "Easy ★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 859,
+                                                                    lineNumber: 1008,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2646,7 +2676,7 @@ function TaskManager() {
                                                                     children: "Medium ★★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 860,
+                                                                    lineNumber: 1009,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2654,19 +2684,19 @@ function TaskManager() {
                                                                     children: "Hard ★★★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 861,
+                                                                    lineNumber: 1010,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 851,
+                                                            lineNumber: 998,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 846,
+                                                    lineNumber: 993,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2676,7 +2706,7 @@ function TaskManager() {
                                                             children: "Tags"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 866,
+                                                            lineNumber: 1015,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2684,7 +2714,7 @@ function TaskManager() {
                                                             placeholder: "Add tags...",
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput,
                                                             onKeyDown: (e)=>{
-                                                                if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                                                                if (e.key === "Enter" && e.currentTarget.value.trim()) {
                                                                     setEditingHabit({
                                                                         ...editingHabit,
                                                                         tags: [
@@ -2692,18 +2722,18 @@ function TaskManager() {
                                                                             e.currentTarget.value.trim()
                                                                         ]
                                                                     });
-                                                                    e.currentTarget.value = '';
+                                                                    e.currentTarget.value = "";
                                                                 }
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 867,
+                                                            lineNumber: 1016,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 865,
+                                                    lineNumber: 1014,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2713,7 +2743,7 @@ function TaskManager() {
                                                             children: "Reset Counter"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 884,
+                                                            lineNumber: 1036,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -2724,18 +2754,18 @@ function TaskManager() {
                                                                 children: "Daily"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 889,
+                                                                lineNumber: 1038,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 885,
+                                                            lineNumber: 1037,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 883,
+                                                    lineNumber: 1035,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2749,36 +2779,36 @@ function TaskManager() {
                                                                 children: "🗑"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 898,
+                                                                lineNumber: 1047,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "Delete this Habit"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 894,
+                                                        lineNumber: 1043,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 893,
+                                                    lineNumber: 1042,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 788,
+                                            lineNumber: 915,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 765,
+                                    lineNumber: 892,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 764,
+                                lineNumber: 891,
                                 columnNumber: 13
                             }, this),
                             showEditDailyModal && editingDaily && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2793,7 +2823,7 @@ function TaskManager() {
                                                     children: "Edit Daily"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 911,
+                                                    lineNumber: 1060,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2808,7 +2838,7 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 913,
+                                                            lineNumber: 1062,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2818,19 +2848,19 @@ function TaskManager() {
                                                             children: "Save"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 922,
+                                                            lineNumber: 1071,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 912,
+                                                    lineNumber: 1061,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 910,
+                                            lineNumber: 1059,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2843,7 +2873,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 934,
+                                                            lineNumber: 1083,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2856,13 +2886,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 935,
+                                                            lineNumber: 1084,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 933,
+                                                    lineNumber: 1082,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2872,7 +2902,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 947,
+                                                            lineNumber: 1098,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -2885,13 +2915,13 @@ function TaskManager() {
                                                             rows: 4
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 948,
+                                                            lineNumber: 1099,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 946,
+                                                    lineNumber: 1097,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2901,7 +2931,7 @@ function TaskManager() {
                                                             children: "Checklist"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 960,
+                                                            lineNumber: 1113,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2919,31 +2949,31 @@ function TaskManager() {
                                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].checklistCheckbox
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 965,
+                                                                                    lineNumber: 1118,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                     children: item
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 971,
+                                                                                    lineNumber: 1124,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 964,
+                                                                            lineNumber: 1117,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, index, false, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 963,
+                                                                        lineNumber: 1116,
                                                                         columnNumber: 25
                                                                     }, this)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].addChecklistItem,
                                                                     onClick: ()=>{
-                                                                        const item = prompt('Enter checklist item:');
+                                                                        const item = prompt("Enter checklist item:");
                                                                         if (item?.trim()) {
                                                                             setEditingDaily({
                                                                                 ...editingDaily,
@@ -2957,19 +2987,19 @@ function TaskManager() {
                                                                     children: "+ New checklist item"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 975,
+                                                                    lineNumber: 1128,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 961,
+                                                            lineNumber: 1114,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 959,
+                                                    lineNumber: 1112,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2983,13 +3013,13 @@ function TaskManager() {
                                                                     children: "ⓘ"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 995,
+                                                                    lineNumber: 1151,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 993,
+                                                            lineNumber: 1149,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3005,7 +3035,7 @@ function TaskManager() {
                                                                     children: "Easy ★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1005,
+                                                                    lineNumber: 1163,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3013,7 +3043,7 @@ function TaskManager() {
                                                                     children: "Medium ★★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1006,
+                                                                    lineNumber: 1164,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3021,19 +3051,19 @@ function TaskManager() {
                                                                     children: "Hard ★★★★"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1007,
+                                                                    lineNumber: 1165,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 997,
+                                                            lineNumber: 1153,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 992,
+                                                    lineNumber: 1148,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3043,12 +3073,12 @@ function TaskManager() {
                                                             children: "Start Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1012,
+                                                            lineNumber: 1170,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                             type: "date",
-                                                            value: editingDaily.startDate || '',
+                                                            value: editingDaily.startDate || "",
                                                             onChange: (e)=>setEditingDaily({
                                                                     ...editingDaily,
                                                                     startDate: e.target.value
@@ -3056,13 +3086,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1013,
+                                                            lineNumber: 1171,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1011,
+                                                    lineNumber: 1169,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3072,11 +3102,11 @@ function TaskManager() {
                                                             children: "Repeats"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1025,
+                                                            lineNumber: 1185,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                                            value: editingDaily.repeats || 'monthly',
+                                                            value: editingDaily.repeats || "monthly",
                                                             onChange: (e)=>setEditingDaily({
                                                                     ...editingDaily,
                                                                     repeats: e.target.value
@@ -3088,7 +3118,7 @@ function TaskManager() {
                                                                     children: "Daily"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1034,
+                                                                    lineNumber: 1196,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3096,7 +3126,7 @@ function TaskManager() {
                                                                     children: "Weekly"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1035,
+                                                                    lineNumber: 1197,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3104,19 +3134,19 @@ function TaskManager() {
                                                                     children: "Monthly"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1036,
+                                                                    lineNumber: 1198,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1026,
+                                                            lineNumber: 1186,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1024,
+                                                    lineNumber: 1184,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3126,7 +3156,7 @@ function TaskManager() {
                                                             children: "Repeat Every"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1041,
+                                                            lineNumber: 1203,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3143,26 +3173,26 @@ function TaskManager() {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1043,
+                                                                    lineNumber: 1205,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: "Months"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1053,
+                                                                    lineNumber: 1217,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1042,
+                                                            lineNumber: 1204,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1040,
+                                                    lineNumber: 1202,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3172,7 +3202,7 @@ function TaskManager() {
                                                             children: "Repeat On"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1058,
+                                                            lineNumber: 1222,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3185,23 +3215,23 @@ function TaskManager() {
                                                                             type: "radio",
                                                                             name: "repeatOn",
                                                                             value: "dayOfMonth",
-                                                                            checked: editingDaily.repeatOn?.[0] === 'dayOfMonth',
+                                                                            checked: editingDaily.repeatOn?.[0] === "dayOfMonth",
                                                                             onChange: ()=>setEditingDaily({
                                                                                     ...editingDaily,
                                                                                     repeatOn: [
-                                                                                        'dayOfMonth'
+                                                                                        "dayOfMonth"
                                                                                     ]
                                                                                 })
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1061,
+                                                                            lineNumber: 1225,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         "Day of the Month"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1060,
+                                                                    lineNumber: 1224,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -3211,35 +3241,35 @@ function TaskManager() {
                                                                             type: "radio",
                                                                             name: "repeatOn",
                                                                             value: "dayOfWeek",
-                                                                            checked: editingDaily.repeatOn?.[0] === 'dayOfWeek',
+                                                                            checked: editingDaily.repeatOn?.[0] === "dayOfWeek",
                                                                             onChange: ()=>setEditingDaily({
                                                                                     ...editingDaily,
                                                                                     repeatOn: [
-                                                                                        'dayOfWeek'
+                                                                                        "dayOfWeek"
                                                                                     ]
                                                                                 })
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1074,
+                                                                            lineNumber: 1240,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         "Day of the Week"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1073,
+                                                                    lineNumber: 1239,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1059,
+                                                            lineNumber: 1223,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1057,
+                                                    lineNumber: 1221,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3249,7 +3279,7 @@ function TaskManager() {
                                                             children: "Tags"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1090,
+                                                            lineNumber: 1258,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3270,13 +3300,13 @@ function TaskManager() {
                                                                                 children: "×"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1095,
+                                                                                lineNumber: 1263,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, index, true, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1093,
+                                                                        lineNumber: 1261,
                                                                         columnNumber: 25
                                                                     }, this)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3284,7 +3314,7 @@ function TaskManager() {
                                                                     placeholder: "Add tags...",
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput,
                                                                     onKeyDown: (e)=>{
-                                                                        if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                                                                        if (e.key === "Enter" && e.currentTarget.value.trim()) {
                                                                             setEditingDaily({
                                                                                 ...editingDaily,
                                                                                 tags: [
@@ -3292,24 +3322,24 @@ function TaskManager() {
                                                                                     e.currentTarget.value.trim()
                                                                                 ]
                                                                             });
-                                                                            e.currentTarget.value = '';
+                                                                            e.currentTarget.value = "";
                                                                         }
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1108,
+                                                                    lineNumber: 1278,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1091,
+                                                            lineNumber: 1259,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1089,
+                                                    lineNumber: 1257,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3323,36 +3353,36 @@ function TaskManager() {
                                                                 children: "🗑"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 1130,
+                                                                lineNumber: 1306,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "Delete this Daily"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 1126,
+                                                        lineNumber: 1302,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1125,
+                                                    lineNumber: 1301,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 932,
+                                            lineNumber: 1081,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 909,
+                                    lineNumber: 1058,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 908,
+                                lineNumber: 1057,
                                 columnNumber: 13
                             }, this),
                             showEditTodoModal && editingTodo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3367,7 +3397,7 @@ function TaskManager() {
                                                     children: "Edit To Do"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1143,
+                                                    lineNumber: 1319,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3382,7 +3412,7 @@ function TaskManager() {
                                                             children: "Cancel"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1145,
+                                                            lineNumber: 1321,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3392,19 +3422,19 @@ function TaskManager() {
                                                             children: "Save"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1154,
+                                                            lineNumber: 1330,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1144,
+                                                    lineNumber: 1320,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 1142,
+                                            lineNumber: 1318,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3417,7 +3447,7 @@ function TaskManager() {
                                                             children: "Title*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1166,
+                                                            lineNumber: 1342,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3431,13 +3461,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1167,
+                                                            lineNumber: 1343,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1165,
+                                                    lineNumber: 1341,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3447,7 +3477,7 @@ function TaskManager() {
                                                             children: "Notes"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1180,
+                                                            lineNumber: 1358,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -3461,13 +3491,13 @@ function TaskManager() {
                                                             rows: 4
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1181,
+                                                            lineNumber: 1359,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1179,
+                                                    lineNumber: 1357,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3477,7 +3507,7 @@ function TaskManager() {
                                                             children: "Checklist"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1194,
+                                                            lineNumber: 1374,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3495,31 +3525,31 @@ function TaskManager() {
                                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].checklistCheckbox
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1199,
+                                                                                    lineNumber: 1379,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                     children: item
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1205,
+                                                                                    lineNumber: 1385,
                                                                                     columnNumber: 29
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1198,
+                                                                            lineNumber: 1378,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, index, false, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1197,
+                                                                        lineNumber: 1377,
                                                                         columnNumber: 25
                                                                     }, this)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].addChecklistItem,
                                                                     onClick: ()=>{
-                                                                        const item = prompt('Enter checklist item:');
+                                                                        const item = prompt("Enter checklist item:");
                                                                         if (item?.trim()) {
                                                                             setEditingTodo({
                                                                                 ...editingTodo,
@@ -3533,19 +3563,19 @@ function TaskManager() {
                                                                     children: "+ New checklist item"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1209,
+                                                                    lineNumber: 1389,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1195,
+                                                            lineNumber: 1375,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1193,
+                                                    lineNumber: 1373,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3555,7 +3585,7 @@ function TaskManager() {
                                                             children: "Difficulty"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1227,
+                                                            lineNumber: 1410,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -3571,7 +3601,7 @@ function TaskManager() {
                                                                     children: "Easy"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1236,
+                                                                    lineNumber: 1421,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3579,7 +3609,7 @@ function TaskManager() {
                                                                     children: "Medium"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1237,
+                                                                    lineNumber: 1422,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -3587,19 +3617,19 @@ function TaskManager() {
                                                                     children: "Hard"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1238,
+                                                                    lineNumber: 1423,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1228,
+                                                            lineNumber: 1411,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1226,
+                                                    lineNumber: 1409,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3609,7 +3639,7 @@ function TaskManager() {
                                                             children: "Due Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1243,
+                                                            lineNumber: 1428,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3622,13 +3652,13 @@ function TaskManager() {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1244,
+                                                            lineNumber: 1429,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1242,
+                                                    lineNumber: 1427,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3638,7 +3668,7 @@ function TaskManager() {
                                                             children: "Tags"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1256,
+                                                            lineNumber: 1443,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3659,13 +3689,13 @@ function TaskManager() {
                                                                                 children: "×"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1261,
+                                                                                lineNumber: 1448,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, index, true, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1259,
+                                                                        lineNumber: 1446,
                                                                         columnNumber: 25
                                                                     }, this)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3673,7 +3703,7 @@ function TaskManager() {
                                                                     placeholder: "Add tags...",
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].modalInput,
                                                                     onKeyDown: (e)=>{
-                                                                        if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                                                                        if (e.key === "Enter" && e.currentTarget.value.trim()) {
                                                                             setEditingTodo({
                                                                                 ...editingTodo,
                                                                                 tags: [
@@ -3681,24 +3711,24 @@ function TaskManager() {
                                                                                     e.currentTarget.value.trim()
                                                                                 ]
                                                                             });
-                                                                            e.currentTarget.value = '';
+                                                                            e.currentTarget.value = "";
                                                                         }
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1274,
+                                                                    lineNumber: 1463,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1257,
+                                                            lineNumber: 1444,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1255,
+                                                    lineNumber: 1442,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3712,53 +3742,53 @@ function TaskManager() {
                                                                 children: "🗑"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 1296,
+                                                                lineNumber: 1491,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "Delete this To Do"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 1292,
+                                                        lineNumber: 1487,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1291,
+                                                    lineNumber: 1486,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                            lineNumber: 1164,
+                                            lineNumber: 1340,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 1141,
+                                    lineNumber: 1317,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 1140,
+                                lineNumber: 1316,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tabs,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === 'habits' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ''}`,
-                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('habits')),
+                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === "habits" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ""}`,
+                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("habits")),
                                         children: "Habits"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 1306,
+                                        lineNumber: 1501,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === 'dailies' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ''}`,
-                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('dailies')),
+                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === "dailies" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ""}`,
+                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("dailies")),
                                         children: [
                                             "Dailies",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3766,28 +3796,28 @@ function TaskManager() {
                                                 children: dailiesCount
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 1317,
+                                                lineNumber: 1516,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 1312,
+                                        lineNumber: 1509,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === 'todos' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ''}`,
-                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])('todos')),
+                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].tab} ${activeTab === "todos" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ""}`,
+                                        onClick: ()=>dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setActiveTab"])("todos")),
                                         children: "To Dos"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 1319,
+                                        lineNumber: 1518,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 1305,
+                                lineNumber: 1500,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3800,28 +3830,28 @@ function TaskManager() {
                                             filteredTasks.map((task)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].taskCard,
                                                     children: [
-                                                        task.type === 'habit' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        task.type === "habit" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitContainer,
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].habitButtons,
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].actionButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${task.habitType === 'positive' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].inactive}`,
+                                                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].actionButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].positiveButton} ${task.habitType === "positive" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].inactive}`,
                                                                             onClick: ()=>{
                                                                                 const habitTask = task;
-                                                                                if (habitTask.habitType === 'positive') {
+                                                                                if (habitTask.habitType === "positive") {
                                                                                     dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateTask"])({
                                                                                         ...task,
                                                                                         completed: true
                                                                                     }));
-                                                                                    showNotification('You gained 5 gold! ✨', 'gold');
+                                                                                    showNotification("You gained 5 gold! ✨", "gold");
                                                                                 }
                                                                             },
                                                                             children: "+"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1338,
+                                                                            lineNumber: 1536,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3835,7 +3865,7 @@ function TaskManager() {
                                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].taskTitle
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1355,
+                                                                                    lineNumber: 1570,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 task.notes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3843,7 +3873,7 @@ function TaskManager() {
                                                                                     children: task.notes
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1363,
+                                                                                    lineNumber: 1580,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 task.tags && task.tags.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3854,7 +3884,7 @@ function TaskManager() {
                                                                                             children: "🏷️"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                            lineNumber: 1367,
+                                                                                            lineNumber: 1586,
                                                                                             columnNumber: 33
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3864,48 +3894,48 @@ function TaskManager() {
                                                                                                     children: tag
                                                                                                 }, index, false, {
                                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                                    lineNumber: 1370,
-                                                                                                    columnNumber: 37
+                                                                                                    lineNumber: 1590,
+                                                                                                    columnNumber: 39
                                                                                                 }, this))
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                            lineNumber: 1368,
+                                                                                            lineNumber: 1587,
                                                                                             columnNumber: 33
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1366,
+                                                                                    lineNumber: 1585,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1354,
+                                                                            lineNumber: 1569,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].actionButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${task.habitType === 'negative' ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].inactive}`,
+                                                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].actionButton} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].negativeButton} ${task.habitType === "negative" ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].inactive}`,
                                                                             onClick: ()=>{
                                                                                 const habitTask = task;
-                                                                                if (habitTask.habitType === 'negative') {
+                                                                                if (habitTask.habitType === "negative") {
                                                                                     dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$store$2f$slices$2f$tasksSlice$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["updateTask"])({
                                                                                         ...task,
                                                                                         completed: true
                                                                                     }));
-                                                                                    showNotification('You lost 5 health! ❤️', 'health');
+                                                                                    showNotification("You lost 5 health! ❤️", "health");
                                                                                 }
                                                                             },
                                                                             children: "−"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1377,
+                                                                            lineNumber: 1600,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1337,
+                                                                    lineNumber: 1535,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3917,7 +3947,7 @@ function TaskManager() {
                                                                             children: "⋮"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1395,
+                                                                            lineNumber: 1635,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         task.showMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3929,7 +3959,7 @@ function TaskManager() {
                                                                                     children: "Edit"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1403,
+                                                                                    lineNumber: 1645,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3938,28 +3968,28 @@ function TaskManager() {
                                                                                     children: "Delete"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1409,
+                                                                                    lineNumber: 1651,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1402,
+                                                                            lineNumber: 1644,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1394,
+                                                                    lineNumber: 1634,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                            lineNumber: 1336,
+                                                            lineNumber: 1534,
                                                             columnNumber: 23
                                                         }, this),
-                                                        task.type === 'daily' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                        task.type === "daily" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].taskCheckbox,
@@ -3973,26 +4003,26 @@ function TaskManager() {
                                                                             }));
                                                                             if (!task.completed) {
                                                                                 // When checking the box
-                                                                                showNotification('You gained 10 gold! ✨', 'gold');
+                                                                                showNotification("You gained 10 gold! ✨", "gold");
                                                                                 setTimeout(()=>{
-                                                                                    showNotification('You gained 20 experience! 📈', 'experience');
+                                                                                    showNotification("You gained 20 experience! 📈", "experience");
                                                                                 }, 300);
                                                                             } else {
                                                                                 // When unchecking the box
-                                                                                showNotification('You spent 10 gold', 'gold');
+                                                                                showNotification("You spent 10 gold", "gold");
                                                                                 setTimeout(()=>{
-                                                                                    showNotification('You lost 20 experience', 'experience');
+                                                                                    showNotification("You lost 20 experience", "experience");
                                                                                 }, 300);
                                                                             }
                                                                         }
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1424,
+                                                                        lineNumber: 1666,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1423,
+                                                                    lineNumber: 1665,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4005,7 +4035,7 @@ function TaskManager() {
                                                                                 children: task.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1451,
+                                                                                lineNumber: 1704,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             task.notes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4013,7 +4043,7 @@ function TaskManager() {
                                                                                 children: task.notes
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1455,
+                                                                                lineNumber: 1708,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             task.tags && task.tags.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4024,7 +4054,7 @@ function TaskManager() {
                                                                                         children: "🏷️"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                        lineNumber: 1459,
+                                                                                        lineNumber: 1714,
                                                                                         columnNumber: 33
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4034,29 +4064,29 @@ function TaskManager() {
                                                                                                 children: tag
                                                                                             }, index, false, {
                                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                                lineNumber: 1462,
-                                                                                                columnNumber: 37
+                                                                                                lineNumber: 1718,
+                                                                                                columnNumber: 39
                                                                                             }, this))
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                        lineNumber: 1460,
+                                                                                        lineNumber: 1715,
                                                                                         columnNumber: 33
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1458,
+                                                                                lineNumber: 1713,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1450,
+                                                                        lineNumber: 1703,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1449,
+                                                                    lineNumber: 1702,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4068,7 +4098,7 @@ function TaskManager() {
                                                                             children: "⋮"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1471,
+                                                                            lineNumber: 1730,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         task.showMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4080,7 +4110,7 @@ function TaskManager() {
                                                                                     children: "Edit"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1479,
+                                                                                    lineNumber: 1740,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4089,24 +4119,24 @@ function TaskManager() {
                                                                                     children: "Delete"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1485,
+                                                                                    lineNumber: 1746,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1478,
+                                                                            lineNumber: 1739,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1470,
+                                                                    lineNumber: 1729,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true),
-                                                        task.type === 'todo' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                        task.type === "todo" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].taskCheckbox,
@@ -4116,9 +4146,9 @@ function TaskManager() {
                                                                         onChange: ()=>{
                                                                             if (!task.completed) {
                                                                                 // When checking the box
-                                                                                showNotification('You gained 15 gold! ✨', 'gold');
+                                                                                showNotification("You gained 15 gold! ✨", "gold");
                                                                                 setTimeout(()=>{
-                                                                                    showNotification('You gained 25 experience! 📈', 'experience');
+                                                                                    showNotification("You gained 25 experience! 📈", "experience");
                                                                                 }, 300);
                                                                                 // Remove the todo after a short delay to allow animations to complete
                                                                                 setTimeout(()=>{
@@ -4128,12 +4158,12 @@ function TaskManager() {
                                                                         }
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1500,
+                                                                        lineNumber: 1761,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1499,
+                                                                    lineNumber: 1760,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4146,18 +4176,19 @@ function TaskManager() {
                                                                                 children: task.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1522,
+                                                                                lineNumber: 1789,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             task.dueDate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].dueDate,
                                                                                 children: [
-                                                                                    "Due: ",
+                                                                                    "Due:",
+                                                                                    " ",
                                                                                     new Date(task.dueDate).toLocaleDateString()
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1526,
+                                                                                lineNumber: 1793,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             task.notes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4165,7 +4196,7 @@ function TaskManager() {
                                                                                 children: task.notes
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1531,
+                                                                                lineNumber: 1799,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             task.checklist && task.checklist.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4178,25 +4209,25 @@ function TaskManager() {
                                                                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].checklistCheckbox
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                                lineNumber: 1537,
-                                                                                                columnNumber: 37
+                                                                                                lineNumber: 1811,
+                                                                                                columnNumber: 39
                                                                                             }, this),
                                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: item
                                                                                             }, void 0, false, {
                                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                                lineNumber: 1541,
-                                                                                                columnNumber: 37
+                                                                                                lineNumber: 1815,
+                                                                                                columnNumber: 39
                                                                                             }, this)
                                                                                         ]
                                                                                     }, index, true, {
                                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                        lineNumber: 1536,
-                                                                                        columnNumber: 35
+                                                                                        lineNumber: 1807,
+                                                                                        columnNumber: 37
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1534,
+                                                                                lineNumber: 1804,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             task.tags && task.tags.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4207,7 +4238,7 @@ function TaskManager() {
                                                                                         children: "🏷️"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                        lineNumber: 1548,
+                                                                                        lineNumber: 1823,
                                                                                         columnNumber: 33
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4217,29 +4248,29 @@ function TaskManager() {
                                                                                                 children: tag
                                                                                             }, index, false, {
                                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                                lineNumber: 1551,
-                                                                                                columnNumber: 37
+                                                                                                lineNumber: 1827,
+                                                                                                columnNumber: 39
                                                                                             }, this))
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                        lineNumber: 1549,
+                                                                                        lineNumber: 1824,
                                                                                         columnNumber: 33
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                lineNumber: 1547,
+                                                                                lineNumber: 1822,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                        lineNumber: 1521,
+                                                                        lineNumber: 1788,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1520,
+                                                                    lineNumber: 1787,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4251,7 +4282,7 @@ function TaskManager() {
                                                                             children: "⋮"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1560,
+                                                                            lineNumber: 1839,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         task.showMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4263,7 +4294,7 @@ function TaskManager() {
                                                                                     children: "Edit"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1568,
+                                                                                    lineNumber: 1849,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4272,19 +4303,19 @@ function TaskManager() {
                                                                                     children: "Delete"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                                    lineNumber: 1574,
+                                                                                    lineNumber: 1855,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                            lineNumber: 1567,
+                                                                            lineNumber: 1848,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                    lineNumber: 1559,
+                                                                    lineNumber: 1838,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
@@ -4292,7 +4323,7 @@ function TaskManager() {
                                                     ]
                                                 }, task.id, true, {
                                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                    lineNumber: 1331,
+                                                    lineNumber: 1532,
                                                     columnNumber: 19
                                                 }, this)),
                                             filteredTasks.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4301,13 +4332,13 @@ function TaskManager() {
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TaskManager$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].emptyIcon,
                                                         children: [
-                                                            activeTab === 'habits' && '⚖️',
-                                                            activeTab === 'dailies' && '📅',
-                                                            activeTab === 'todos' && '✓'
+                                                            activeTab === "habits" && "⚖️",
+                                                            activeTab === "dailies" && "📅",
+                                                            activeTab === "todos" && "✓"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 1590,
+                                                        lineNumber: 1871,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4316,65 +4347,65 @@ function TaskManager() {
                                                             `These are your ${activeTab}`,
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                                lineNumber: 1597,
+                                                                lineNumber: 1878,
                                                                 columnNumber: 23
                                                             }, this),
-                                                            activeTab === 'habits' && "Habits don't have a rigid schedule. You can check them off multiple times per day.",
-                                                            activeTab === 'dailies' && 'Dailies repeat on a regular basis. Choose the schedule that works best for you!',
-                                                            activeTab === 'todos' && 'To Dos need to be completed once. Add checklists to your To Dos to increase their value.'
+                                                            activeTab === "habits" && "Habits don't have a rigid schedule. You can check them off multiple times per day.",
+                                                            activeTab === "dailies" && "Dailies repeat on a regular basis. Choose the schedule that works best for you!",
+                                                            activeTab === "todos" && "To Dos need to be completed once. Add checklists to your To Dos to increase their value."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                        lineNumber: 1595,
+                                                        lineNumber: 1876,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                                lineNumber: 1589,
+                                                lineNumber: 1870,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                                        lineNumber: 1329,
+                                        lineNumber: 1530,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/TaskManager.tsx",
-                                    lineNumber: 1328,
+                                    lineNumber: 1529,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                                lineNumber: 1327,
+                                lineNumber: 1528,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/TaskManager.tsx",
-                        lineNumber: 343,
+                        lineNumber: 375,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                lineNumber: 325,
+                lineNumber: 348,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Footer$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/components/TaskManager.tsx",
-                lineNumber: 1609,
+                lineNumber: 1893,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/TaskManager.tsx",
-        lineNumber: 323,
+        lineNumber: 346,
         columnNumber: 5
     }, this);
 }
-_s(TaskManager, "eGea2XzMP5N3dnLV/bc88eXisis=", false, function() {
+_s(TaskManager, "9SQfgS8/cdIHL/HiyGhcHhECi0w=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useDispatch"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSelector"],
