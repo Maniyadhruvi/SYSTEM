@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Dhruvi/system/my-app/src/app/page.tsx"],"sourcesContent":["\"use client\";\n\nexport default function Home() {\n  return (\n    <main>\n      <div>\n        <h1>Welcome to My App</h1>\n      </div>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBACC,cAAA,8OAAC;0BAAG;;;;;;;;;;;;;;;;AAIZ","debugId":null}}]
+}

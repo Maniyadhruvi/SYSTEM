@@ -1,0 +1,656 @@
+/* [project]/src/app/components/TaskManager.module.css [app-client] (css) */
+.TaskManager-module__CKmgcq__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.TaskManager-module__CKmgcq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.TaskManager-module__CKmgcq__searchInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+.TaskManager-module__CKmgcq__addTaskContainer {
+  position: relative;
+}
+
+.TaskManager-module__CKmgcq__addTaskButton {
+  background-color: #7e3ff2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.TaskManager-module__CKmgcq__modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.TaskManager-module__CKmgcq__modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.TaskManager-module__CKmgcq__modalHeader {
+  background-color: #7e57c2;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.TaskManager-module__CKmgcq__modalHeader h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.TaskManager-module__CKmgcq__modalActions {
+  display: flex;
+  gap: 8px;
+}
+
+.TaskManager-module__CKmgcq__cancelButton {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.TaskManager-module__CKmgcq__createButton {
+  background: #9575cd;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.TaskManager-module__CKmgcq__createButton:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.TaskManager-module__CKmgcq__modalContent {
+  padding: 16px;
+}
+
+.TaskManager-module__CKmgcq__formGroup {
+  margin-bottom: 16px;
+}
+
+.TaskManager-module__CKmgcq__formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.TaskManager-module__CKmgcq__modalInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: .9rem;
+}
+
+.TaskManager-module__CKmgcq__modalTextarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: .9rem;
+  min-height: 100px;
+}
+
+.TaskManager-module__CKmgcq__modalSelect {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: .9rem;
+  background-color: #fff;
+}
+
+.TaskManager-module__CKmgcq__repeatEveryContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.TaskManager-module__CKmgcq__repeatEveryContainer input {
+  width: 80px;
+}
+
+.TaskManager-module__CKmgcq__weekDays {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.TaskManager-module__CKmgcq__dayButton {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.TaskManager-module__CKmgcq__dayButton.TaskManager-module__CKmgcq__selected {
+  background: #7e57c2;
+  color: #fff;
+  border-color: #7e57c2;
+}
+
+.TaskManager-module__CKmgcq__habitControls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.TaskManager-module__CKmgcq__habitButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.TaskManager-module__CKmgcq__positiveButton, .TaskManager-module__CKmgcq__negativeButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity .2s;
+}
+
+.TaskManager-module__CKmgcq__positiveButton {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.TaskManager-module__CKmgcq__negativeButton {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.TaskManager-module__CKmgcq__positiveButton:hover, .TaskManager-module__CKmgcq__negativeButton:hover {
+  opacity: .9;
+}
+
+.TaskManager-module__CKmgcq__popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px #0000001a;
+  min-width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.TaskManager-module__CKmgcq__popupOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  transition: background-color .2s;
+}
+
+.TaskManager-module__CKmgcq__popupOption:hover {
+  background-color: #f5f5f5;
+}
+
+.TaskManager-module__CKmgcq__optionIcon {
+  font-size: 18px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TaskManager-module__CKmgcq__tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.TaskManager-module__CKmgcq__tab {
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+}
+
+.TaskManager-module__CKmgcq__tab.TaskManager-module__CKmgcq__active {
+  color: #7e3ff2;
+}
+
+.TaskManager-module__CKmgcq__tab.TaskManager-module__CKmgcq__active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #7e3ff2;
+}
+
+.TaskManager-module__CKmgcq__content {
+  display: flex;
+  gap: 20px;
+}
+
+.TaskManager-module__CKmgcq__section {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1;
+}
+
+.TaskManager-module__CKmgcq__sectionHeader {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #e8e8e8;
+  border-radius: 4px;
+}
+
+.TaskManager-module__CKmgcq__addTaskInput {
+  background-color: #e8e8e8;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.TaskManager-module__CKmgcq__taskInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color .2s;
+}
+
+.TaskManager-module__CKmgcq__taskInput:focus {
+  outline: none;
+  border-color: #7e3ff2;
+}
+
+.TaskManager-module__CKmgcq__taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.TaskManager-module__CKmgcq__taskItem {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 1px 3px #0000001a;
+}
+
+.TaskManager-module__CKmgcq__taskContent {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.TaskManager-module__CKmgcq__taskNotes {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.TaskManager-module__CKmgcq__taskActions {
+  display: flex;
+  gap: 8px;
+}
+
+.TaskManager-module__CKmgcq__deleteButton {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.TaskManager-module__CKmgcq__emptyState {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.TaskManager-module__CKmgcq__emptyIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.TaskManager-module__CKmgcq__emptyText {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.TaskManager-module__CKmgcq__taskDetails {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.TaskManager-module__CKmgcq__taskDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.TaskManager-module__CKmgcq__taskDetail span {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.TaskManager-module__CKmgcq__checklistContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.TaskManager-module__CKmgcq__addChecklistItem {
+  background: none;
+  border: none;
+  color: #7e57c2;
+  padding: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.TaskManager-module__CKmgcq__addChecklistItem:hover {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.TaskManager-module__CKmgcq__checklistItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.TaskManager-module__CKmgcq__removeChecklistItem {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 1.2rem;
+}
+
+.TaskManager-module__CKmgcq__removeChecklistItem:hover {
+  color: #ff6b6b;
+}
+
+.TaskManager-module__CKmgcq__tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.TaskManager-module__CKmgcq__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: .9rem;
+}
+
+.TaskManager-module__CKmgcq__removeTag {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 1rem;
+}
+
+.TaskManager-module__CKmgcq__removeTag:hover {
+  color: #ff6b6b;
+}
+
+.TaskManager-module__CKmgcq__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+/* [project]/src/app/components/Header.module.css [app-client] (css) */
+.Header-module__GPz-la__header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.Header-module__GPz-la__headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header-module__GPz-la__leftSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Header-module__GPz-la__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7e57c2;
+  margin: 0;
+}
+
+.Header-module__GPz-la__navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.Header-module__GPz-la__navLink {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding: .5rem;
+  transition: color .2s;
+}
+
+.Header-module__GPz-la__navLink:hover {
+  color: #7e57c2;
+}
+
+.Header-module__GPz-la__rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Header-module__GPz-la__searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: .5rem;
+  width: 300px;
+}
+
+.Header-module__GPz-la__searchInput {
+  border: none;
+  background: none;
+  padding: .25rem .5rem;
+  font-size: .9rem;
+  width: 100%;
+  color: #333;
+}
+
+.Header-module__GPz-la__searchInput:focus {
+  outline: none;
+}
+
+.Header-module__GPz-la__searchButton {
+  background: none;
+  border: none;
+  padding: .25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.Header-module__GPz-la__userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Header-module__GPz-la__notificationButton {
+  background: none;
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.Header-module__GPz-la__notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: .7rem;
+  padding: .1rem .4rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.Header-module__GPz-la__userProfile {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.Header-module__GPz-la__userProfile:hover {
+  background-color: #f5f5f5;
+}
+
+.Header-module__GPz-la__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.Header-module__GPz-la__userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header-module__GPz-la__userName {
+  font-weight: 600;
+  color: #333;
+  font-size: .9rem;
+}
+
+.Header-module__GPz-la__userRole {
+  color: #666;
+  font-size: .8rem;
+}
+
+
+/*# sourceMappingURL=src_app_components_e9509156._.css.map*/

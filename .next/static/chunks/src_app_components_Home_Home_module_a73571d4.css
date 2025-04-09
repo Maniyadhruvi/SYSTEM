@@ -1,0 +1,108 @@
+/* [project]/src/app/components/Home/Home.module.css [app-client] (css) */
+.Home-module__bLO7Aq__container {
+  min-height: 100vh;
+  background-color: #432874;
+  position: relative;
+  overflow: hidden;
+}
+
+.Home-module__bLO7Aq__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.Home-module__bLO7Aq__logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Home-module__bLO7Aq__navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Home-module__bLO7Aq__navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.Home-module__bLO7Aq__loginBtn {
+  background-color: #fff;
+  color: #432874;
+  border: none;
+  padding: .5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Home-module__bLO7Aq__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.Home-module__bLO7Aq__heroContent {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Home-module__bLO7Aq__characters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.Home-module__bLO7Aq__characterPlaceholder {
+  width: 64px;
+  height: 64px;
+  background-color: #fff3;
+  border-radius: 8px;
+}
+
+.Home-module__bLO7Aq__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.Home-module__bLO7Aq__description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: .9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Home-module__bLO7Aq__decorativeBlocks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Home-module__bLO7Aq__decorativeBlocks div {
+  height: 100px;
+  background-color: #0003;
+  border-radius: 8px 8px 0 0;
+}
+
+
+/*# sourceMappingURL=src_app_components_Home_Home_module_a73571d4.css.map*/

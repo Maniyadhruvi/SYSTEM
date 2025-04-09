@@ -1,0 +1,166 @@
+/* [project]/src/app/components/Register/Register.module.css [app-client] (css) */
+.Register-module__68xcPq__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #432874;
+  padding: 1rem;
+}
+
+.Register-module__68xcPq__registerBox {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 400px;
+  animation: .5s ease-out Register-module__68xcPq__slideUp;
+}
+
+.Register-module__68xcPq__registerBox h2 {
+  color: #432874;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.Register-module__68xcPq__inputGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.Register-module__68xcPq__inputGroup input {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color .3s;
+}
+
+.Register-module__68xcPq__inputGroup input:focus {
+  outline: none;
+  border-color: #432874;
+}
+
+.Register-module__68xcPq__inputGroup input.Register-module__68xcPq__error {
+  border-color: #dc3545;
+}
+
+.Register-module__68xcPq__passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Register-module__68xcPq__passwordWrapper input {
+  padding-right: 40px;
+}
+
+.Register-module__68xcPq__eyeIcon {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.Register-module__68xcPq__registerButton {
+  width: 100%;
+  padding: .8rem;
+  background-color: #432874;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s;
+  margin-bottom: 1.5rem;
+}
+
+.Register-module__68xcPq__registerButton:hover {
+  background-color: #351d63;
+}
+
+.Register-module__68xcPq__signinLink {
+  text-align: center;
+  color: #666;
+  font-size: .9rem;
+}
+
+.Register-module__68xcPq__signinLink a {
+  color: #432874;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: .3rem;
+}
+
+.Register-module__68xcPq__signinLink a:hover {
+  text-decoration: underline;
+}
+
+.Register-module__68xcPq__signinButton {
+  background: none;
+  border: none;
+  color: #432874;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-left: .3rem;
+  font-size: inherit;
+}
+
+.Register-module__68xcPq__signinButton:hover {
+  text-decoration: underline;
+}
+
+.Register-module__68xcPq__errorMessage {
+  color: #dc3545;
+  font-size: .8rem;
+  margin-top: .25rem;
+  display: block;
+}
+
+.Register-module__68xcPq__toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #0003;
+  z-index: 1000;
+  animation: .3s ease-out Register-module__68xcPq__slideInRight;
+}
+
+@keyframes Register-module__68xcPq__slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Register-module__68xcPq__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=src_app_components_Register_Register_module_b52d8e88.css.map*/

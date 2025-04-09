@@ -1,0 +1,474 @@
+/* [project]/src/app/components/Home/Home.module.css [app-client] (css) */
+.Home-module__bLO7Aq__container {
+  min-height: 100vh;
+  background-color: #432874;
+  position: relative;
+  overflow: hidden;
+}
+
+.Home-module__bLO7Aq__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.Home-module__bLO7Aq__logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Home-module__bLO7Aq__navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Home-module__bLO7Aq__navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.Home-module__bLO7Aq__loginBtn {
+  background-color: #fff;
+  color: #432874;
+  border: none;
+  padding: .5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Home-module__bLO7Aq__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.Home-module__bLO7Aq__heroContent {
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Home-module__bLO7Aq__characters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.Home-module__bLO7Aq__characterPlaceholder {
+  width: 64px;
+  height: 64px;
+  background-color: #fff3;
+  border-radius: 8px;
+}
+
+.Home-module__bLO7Aq__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.Home-module__bLO7Aq__description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: .9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Home-module__bLO7Aq__decorativeBlocks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Home-module__bLO7Aq__decorativeBlocks div {
+  height: 100px;
+  background-color: #0003;
+  border-radius: 8px 8px 0 0;
+}
+
+.Home-module__bLO7Aq__modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.Home-module__bLO7Aq__modalContent {
+  position: relative;
+  background: none;
+  border-radius: 8px;
+  max-width: 90%;
+  animation: .3s ease-out Home-module__bLO7Aq__modalFadeIn;
+}
+
+.Home-module__bLO7Aq__closeButton {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+@keyframes Home-module__bLO7Aq__modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* [project]/src/app/components/Login/Login.module.css [app-client] (css) */
+.Login-module__KBzzkq__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #432874;
+  padding: 1rem;
+}
+
+.Login-module__KBzzkq__loginBox {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Login-module__KBzzkq__loginBox h2 {
+  color: #432874;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.Login-module__KBzzkq__inputGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.Login-module__KBzzkq__inputGroup input {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.Login-module__KBzzkq__inputGroup input:focus {
+  outline: none;
+  border-color: #432874;
+}
+
+.Login-module__KBzzkq__inputGroup input.Login-module__KBzzkq__error {
+  border-color: #dc3545;
+}
+
+.Login-module__KBzzkq__passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Login-module__KBzzkq__passwordWrapper input {
+  padding-right: 40px;
+}
+
+.Login-module__KBzzkq__eyeIcon {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.Login-module__KBzzkq__loginButton {
+  width: 100%;
+  padding: .8rem;
+  background-color: #432874;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s;
+  margin-bottom: 1.5rem;
+}
+
+.Login-module__KBzzkq__loginButton:hover {
+  background-color: #351d63;
+}
+
+.Login-module__KBzzkq__signupLink {
+  text-align: center;
+  color: #666;
+  font-size: .9rem;
+}
+
+.Login-module__KBzzkq__signupLink a {
+  color: #432874;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: .3rem;
+}
+
+.Login-module__KBzzkq__signupLink a:hover {
+  text-decoration: underline;
+}
+
+.Login-module__KBzzkq__signupButton {
+  background: none;
+  border: none;
+  color: #432874;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-left: .3rem;
+  font-size: inherit;
+}
+
+.Login-module__KBzzkq__signupButton:hover {
+  text-decoration: underline;
+}
+
+.Login-module__KBzzkq__errorMessage {
+  color: #dc3545;
+  font-size: .8rem;
+  margin-top: .25rem;
+  display: block;
+}
+
+.Login-module__KBzzkq__toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #0003;
+  z-index: 1000;
+  animation: .3s ease-out Login-module__KBzzkq__slideInRight;
+}
+
+@keyframes Login-module__KBzzkq__slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* [project]/src/app/components/Register/Register.module.css [app-client] (css) */
+.Register-module__68xcPq__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #432874;
+  padding: 1rem;
+}
+
+.Register-module__68xcPq__registerBox {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 400px;
+  animation: .5s ease-out Register-module__68xcPq__slideUp;
+}
+
+.Register-module__68xcPq__registerBox h2 {
+  color: #432874;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.Register-module__68xcPq__inputGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.Register-module__68xcPq__inputGroup input {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color .3s;
+}
+
+.Register-module__68xcPq__inputGroup input:focus {
+  outline: none;
+  border-color: #432874;
+}
+
+.Register-module__68xcPq__inputGroup input.Register-module__68xcPq__error {
+  border-color: #dc3545;
+}
+
+.Register-module__68xcPq__passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Register-module__68xcPq__passwordWrapper input {
+  padding-right: 40px;
+}
+
+.Register-module__68xcPq__eyeIcon {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.Register-module__68xcPq__registerButton {
+  width: 100%;
+  padding: .8rem;
+  background-color: #432874;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s;
+  margin-bottom: 1.5rem;
+}
+
+.Register-module__68xcPq__registerButton:hover {
+  background-color: #351d63;
+}
+
+.Register-module__68xcPq__signinLink {
+  text-align: center;
+  color: #666;
+  font-size: .9rem;
+}
+
+.Register-module__68xcPq__signinLink a {
+  color: #432874;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: .3rem;
+}
+
+.Register-module__68xcPq__signinLink a:hover {
+  text-decoration: underline;
+}
+
+.Register-module__68xcPq__signinButton {
+  background: none;
+  border: none;
+  color: #432874;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-left: .3rem;
+  font-size: inherit;
+}
+
+.Register-module__68xcPq__signinButton:hover {
+  text-decoration: underline;
+}
+
+.Register-module__68xcPq__errorMessage {
+  color: #dc3545;
+  font-size: .8rem;
+  margin-top: .25rem;
+  display: block;
+}
+
+.Register-module__68xcPq__toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #0003;
+  z-index: 1000;
+  animation: .3s ease-out Register-module__68xcPq__slideInRight;
+}
+
+@keyframes Register-module__68xcPq__slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes Register-module__68xcPq__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*# sourceMappingURL=src_app_components_40f4d6a5._.css.map*/

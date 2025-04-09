@@ -1,0 +1,153 @@
+/* [project]/src/app/components/Login/Login.module.css [app-client] (css) */
+.Login-module__KBzzkq__container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #432874;
+  padding: 1rem;
+}
+
+.Login-module__KBzzkq__loginBox {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Login-module__KBzzkq__loginBox h2 {
+  color: #432874;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.Login-module__KBzzkq__inputGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.Login-module__KBzzkq__inputGroup input {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.Login-module__KBzzkq__inputGroup input:focus {
+  outline: none;
+  border-color: #432874;
+}
+
+.Login-module__KBzzkq__inputGroup input.Login-module__KBzzkq__error {
+  border-color: #dc3545;
+}
+
+.Login-module__KBzzkq__passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Login-module__KBzzkq__passwordWrapper input {
+  padding-right: 40px;
+}
+
+.Login-module__KBzzkq__eyeIcon {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.Login-module__KBzzkq__loginButton {
+  width: 100%;
+  padding: .8rem;
+  background-color: #432874;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s;
+  margin-bottom: 1.5rem;
+}
+
+.Login-module__KBzzkq__loginButton:hover {
+  background-color: #351d63;
+}
+
+.Login-module__KBzzkq__signupLink {
+  text-align: center;
+  color: #666;
+  font-size: .9rem;
+}
+
+.Login-module__KBzzkq__signupLink a {
+  color: #432874;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: .3rem;
+}
+
+.Login-module__KBzzkq__signupLink a:hover {
+  text-decoration: underline;
+}
+
+.Login-module__KBzzkq__signupButton {
+  background: none;
+  border: none;
+  color: #432874;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-left: .3rem;
+  font-size: inherit;
+}
+
+.Login-module__KBzzkq__signupButton:hover {
+  text-decoration: underline;
+}
+
+.Login-module__KBzzkq__errorMessage {
+  color: #dc3545;
+  font-size: .8rem;
+  margin-top: .25rem;
+  display: block;
+}
+
+.Login-module__KBzzkq__toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #0003;
+  z-index: 1000;
+  animation: .3s ease-out Login-module__KBzzkq__slideInRight;
+}
+
+@keyframes Login-module__KBzzkq__slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=src_app_components_Login_Login_module_b52d8e88.css.map*/

@@ -1,0 +1,158 @@
+/* [project]/src/app/components/Header.module.css [app-client] (css) */
+.Header-module__GPz-la__header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.Header-module__GPz-la__headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header-module__GPz-la__leftSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Header-module__GPz-la__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7e57c2;
+  margin: 0;
+}
+
+.Header-module__GPz-la__navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.Header-module__GPz-la__navLink {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding: .5rem;
+  transition: color .2s;
+}
+
+.Header-module__GPz-la__navLink:hover {
+  color: #7e57c2;
+}
+
+.Header-module__GPz-la__rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Header-module__GPz-la__searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: .5rem;
+  width: 300px;
+}
+
+.Header-module__GPz-la__searchInput {
+  border: none;
+  background: none;
+  padding: .25rem .5rem;
+  font-size: .9rem;
+  width: 100%;
+  color: #333;
+}
+
+.Header-module__GPz-la__searchInput:focus {
+  outline: none;
+}
+
+.Header-module__GPz-la__searchButton {
+  background: none;
+  border: none;
+  padding: .25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.Header-module__GPz-la__userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Header-module__GPz-la__notificationButton {
+  background: none;
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.Header-module__GPz-la__notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: .7rem;
+  padding: .1rem .4rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.Header-module__GPz-la__userProfile {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.Header-module__GPz-la__userProfile:hover {
+  background-color: #f5f5f5;
+}
+
+.Header-module__GPz-la__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.Header-module__GPz-la__userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header-module__GPz-la__userName {
+  font-weight: 600;
+  color: #333;
+  font-size: .9rem;
+}
+
+.Header-module__GPz-la__userRole {
+  color: #666;
+  font-size: .8rem;
+}
+
+/*# sourceMappingURL=src_app_components_Header_module_b52d8e88.css.map*/

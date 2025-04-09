@@ -1,0 +1,81 @@
+/* [project]/src/app/components/Profile/Profile.module.css [app-client] (css) */
+.Profile-module__hdAPjW__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.Profile-module__hdAPjW__profileBox {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px #0000001a;
+  width: 100%;
+  max-width: 500px;
+}
+
+.Profile-module__hdAPjW__profileBox h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.Profile-module__hdAPjW__inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.Profile-module__hdAPjW__inputGroup label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.Profile-module__hdAPjW__inputGroup input {
+  width: 100%;
+  padding: .75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.Profile-module__hdAPjW__inputGroup input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px #4a90e233;
+}
+
+.Profile-module__hdAPjW__inputGroup input.Profile-module__hdAPjW__error {
+  border-color: #e74c3c;
+}
+
+.Profile-module__hdAPjW__errorMessage {
+  color: #e74c3c;
+  font-size: .875rem;
+  margin-top: .5rem;
+  display: block;
+}
+
+.Profile-module__hdAPjW__updateButton {
+  width: 100%;
+  padding: .75rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.Profile-module__hdAPjW__updateButton:hover {
+  background-color: #357abd;
+}
+
+
+/*# sourceMappingURL=src_app_components_Profile_Profile_module_e4bc9326.css.map*/

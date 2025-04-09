@@ -1,0 +1,213 @@
+/* [project]/src/app/components/Todo.module.css [app-client] (css) */
+.Todo-module__b65fla__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Todo-module__b65fla__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Todo-module__b65fla__header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.Todo-module__b65fla__addButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color .3s;
+}
+
+.Todo-module__b65fla__addButton:hover {
+  background-color: #45a049;
+}
+
+.Todo-module__b65fla__addButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.Todo-module__b65fla__todoList {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.Todo-module__b65fla__todoItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.Todo-module__b65fla__todoItem:last-child {
+  border-bottom: none;
+}
+
+.Todo-module__b65fla__todoCheckbox {
+  margin-right: 15px;
+}
+
+.Todo-module__b65fla__todoCheckbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.Todo-module__b65fla__todoContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Todo-module__b65fla__todoTitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.Todo-module__b65fla__todoTitle.Todo-module__b65fla__completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.Todo-module__b65fla__dueDate {
+  font-size: 12px;
+  color: #666;
+}
+
+.Todo-module__b65fla__deleteButton {
+  background: none;
+  border: none;
+  color: #f44;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+  opacity: .7;
+  transition: opacity .3s;
+}
+
+.Todo-module__b65fla__deleteButton:hover {
+  opacity: 1;
+}
+
+.Todo-module__b65fla__emptyState {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.Todo-module__b65fla__emptyIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.Todo-module__b65fla__emptyText {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.Todo-module__b65fla__modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.Todo-module__b65fla__modal {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.Todo-module__b65fla__modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.Todo-module__b65fla__modalHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.Todo-module__b65fla__closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+.Todo-module__b65fla__modalContent {
+  padding: 20px;
+}
+
+.Todo-module__b65fla__formGroup {
+  margin-bottom: 20px;
+}
+
+.Todo-module__b65fla__formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.Todo-module__b65fla__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.Todo-module__b65fla__input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.Todo-module__b65fla__modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.Todo-module__b65fla__cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Todo-module__b65fla__cancelButton:hover {
+  background-color: #e8e8e8;
+}
+
+/*# sourceMappingURL=src_app_components_Todo_module_b52d8e88.css.map*/
