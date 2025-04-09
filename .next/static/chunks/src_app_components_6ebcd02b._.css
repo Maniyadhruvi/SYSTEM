@@ -897,6 +897,67 @@
   }
 }
 
+.TaskManager-module__CKmgcq__deleteHabitContainer {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.TaskManager-module__CKmgcq__deleteHabitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: .5rem;
+  background-color: #0000;
+  border: none;
+  color: #ff5252;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: opacity .2s;
+  gap: .5rem;
+}
+
+.TaskManager-module__CKmgcq__deleteHabitButton:hover {
+  opacity: .7;
+  background-color: #0000;
+  color: #ff5252;
+}
+
+.TaskManager-module__CKmgcq__deleteContainer {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.TaskManager-module__CKmgcq__deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: .5rem;
+  background-color: #0000;
+  border: none;
+  color: #ff5252;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: opacity .2s;
+  gap: .5rem;
+}
+
+.TaskManager-module__CKmgcq__deleteButton:hover {
+  opacity: .7;
+  background-color: #0000;
+  color: #ff5252;
+}
+
+.TaskManager-module__CKmgcq__deleteIcon {
+  font-size: 1rem;
+  color: #ff5252;
+}
+
 
 /* [project]/src/app/components/Header/Header.module.css [app-client] (css) */
 .Header-module__gbg3bW__header {
